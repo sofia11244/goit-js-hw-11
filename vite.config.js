@@ -6,7 +6,7 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
-    base: '/goit-js-hw-11/',
+    base: '/goit-js-hw-11/', // Repository adın doğru olmalı
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -14,7 +14,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/*.html'),
+        input: glob.sync('./src/*.html'), // HTML dosyalarını otomatik bulur
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
@@ -35,18 +35,18 @@ export default defineConfig(({ command }) => {
           },
         },
       },
-      outDir: '../dist',
-      emptyOutDir: true,
+      outDir: '../dist', // Projenin derleneceği klasör
+      emptyOutDir: true, // Eski derlemeleri temizler
     },
     plugins: [
-      injectHTML(),
-      FullReload(['./src/**/**.html']),
+      injectHTML(), // HTML'e otomatik olarak script etiketlerini ekler
+      FullReload(['./src/**/**.html']), // HTML dosyalarında yapılan değişikliklerle sayfa yeniden yüklenir
       SortCss({
-        sort: 'mobile-first',
+        sort: 'mobile-first', // CSS'i mobil öncelikli olarak sıralar
       }),
     ],
     optimizeDeps: {
-      include: ['izitoast', 'simplelightbox'], // Gerekli bağımlılıkları buraya ekleyin
+      include: ['izitoast', 'simplelightbox'], // Gerekli bağımlılıkları buraya ekle
     },
   };
 });
