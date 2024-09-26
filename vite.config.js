@@ -10,6 +10,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    base: '/goit-js-hw-11/', // Proje adınızı burada belirtin
     build: {
       sourcemap: true,
       rollupOptions: {
@@ -44,5 +45,8 @@ export default defineConfig(({ command }) => {
         sort: 'mobile-first',
       }),
     ],
+    optimizeDeps: {
+      include: ['izitoast', 'simplelightbox'], // Gerekli bağımlılıkları buraya ekleyin
+    },
   };
 });

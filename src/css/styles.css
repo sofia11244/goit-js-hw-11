@@ -4,15 +4,44 @@
   | default @import url()
   |============================
 */
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+.gallery{
+  display: flex;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+#search-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-BOTTOM: 20px;
+}
+a{
+  max-width: 360px;
+}
+p{
+  text-decoration: none;
+}
+
+/* Spinner için stil */
+#loading-spinner {
+  display: none;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
