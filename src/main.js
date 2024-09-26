@@ -32,8 +32,7 @@ form.addEventListener('submit', async (event) => {
     const response = await fetch(`https://pixabay.com/api/?key=46164011-db8308970fd829f53e85acb75&q=${query}&image_type=photo&orientation=horizontal&safesearch=true`);
     const data = await response.json();
       
-    // Burada görselleri yüklemeden önce 2 saniye bekle
-    await new Promise(resolve => setTimeout(resolve, 2000));
+
 
     if (data.hits.length === 0) {
       iziToast.error({
