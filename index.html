@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>goit-js-hw-11</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
 
 
   <!-- <script type="module" src="./main.js" defer></script> -->
@@ -12,7 +14,7 @@
   <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
   <link rel="modulepreload" crossorigin href="/vanilla-app-template/assets/vendor-5ObWk2rO.js">
   <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/vendor-DumFYO8Z.css">
-  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/index-CBQPy0Vp.css">
+  <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/index-BGQHxtR0.css">
 </head>
 
 <body>
@@ -21,17 +23,22 @@
   <div class="container">
     <h1>Görsel Arama</h1>
     <form id="search-form">
-      <input type="text" id="search-input" placeholder="Please enter your keyword" required>
-      <button type="submit">Ara</button>
+      <input 
+      type="text" 
+      id="search-input" 
+      placeholder="Please enter your keyword" required>
+
+      <button type="submit">Search</button>
     </form>
+  </div>
+
+
+
     <!-- Loading spinner -->
     <div id="loading-spinner" style="display: none;"></div>
 
-    <div id="gallery">
+    <ul id="gallery"></ul>
 
-    </div>
-
-  </div>
 
 </body>
 
