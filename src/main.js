@@ -52,13 +52,14 @@ form.addEventListener('submit', async (event) => {
       imgElement.href = image.largeImageURL;
       imgElement.classList.add('gallery-item');
       imgElement.innerHTML = `
+      <li id="gallery-items">
         <img src="${image.webformatURL}" alt="${image.tags}" />
-        <div class="info">
-          <p>Likes: ${image.likes}</p>
-          <p>Comments: ${image.comments}</p>
-          <p>Views: ${image.views}</p>
-          <p>Downloads: ${image.downloads}</p>
-        </div>
+      </li>
+        <div class="gallery-items-info">
+          <p class="gallery-items-info-alt"><strong>Likes  </strong>${image.likes} </p>
+          <p class="gallery-items-info-alt"><strong>Comments </strong> ${image.comments} </p>
+          <p class="gallery-items-info-alt"><strong>Views</strong>  ${image.views} </p>
+          <p class="gallery-items-info-alt"><strong>Downloads </strong> ${image.downloads} </p>
       `;
       gallery.appendChild(imgElement);
     });
